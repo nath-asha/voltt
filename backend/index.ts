@@ -10,11 +10,11 @@ import contactRoutes from "./routes/contactRoutes";
 import userRoutes from "./routes/usersRoute";
 import routers from "./routes/aboutRoutes";
 import faqRoutes from "./routes/faqRoutes";
-import { authenticateJWT, CustomRequest } from './routes/auth.middleware';
+// import { authenticateJWT, CustomRequest } from './routes/auth.middleware';
 import { Request, Response, NextFunction } from 'express'; 
 import jwt from 'jsonwebtoken';
 import cors from 'cors'; 
-import {upload} from './routes/mutler';
+// import {upload} from './routes/mutler';
 import multer, { Multer } from 'multer';
 
 dotenv.config();
@@ -26,8 +26,8 @@ app.use(cors());
 
 const SECRET_KEY = process.env.SECRET_KEY;
 const REFRESH_SECRET_KEY = process.env.REFRESH_SECRET_KEY;
-const app = express();
-const port = 3000;
+// const app = express();
+// const port = 3000;
 
 app.use(express.json());
 app.use(cors({ origin: 'http://localhost:3001' }));
@@ -81,9 +81,9 @@ app.post('/refresh-token', (req: Request, res: Response) => {
 });
 
 
-app.use('/projects', authenticateJWT, serviceRoutes); 
-app.use('/auth', authRoutes); 
-app.use('/upload', (upload as any).single('file'));
+// app.use('/projects', authenticateJWT, serviceRoutes); 
+// // app.use('/auth', authRoutes); 
+// app.use('/upload', (upload as any).single('file'));
 
 
 
