@@ -13,6 +13,7 @@ import FAQPage from "./pages/FAQPage";
 import BucketList from './BucketList';
 
 function App() {
+  const s3ImageURL = "https://s3.ap-northeast-1.wasabisys.com/voltixteam/img2.jpg?AWSAccessKeyId=Z2UAWEK8UJ31HENFKN8H&Expires=1698767554&Signature=T26SIL%2FY3rvdz9zouETFQGMGVyc%3D";
   return (
     <>
       <Navbar />
@@ -29,6 +30,10 @@ function App() {
           <Route path="/FAQ" element={<FAQPage />} />
           <Route path="/bucketlist" element={<BucketList />} />
         </Routes>
+        <div>
+        <h2>Image from S3 Bucket:</h2>
+        <img src={s3ImageURL} alt="S3 Bucket Image" />
+      </div>
       </BrowserRouter>
       <Footer />
     </>
