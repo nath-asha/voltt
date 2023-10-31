@@ -30,10 +30,6 @@ function App() {
           <Route path="/FAQ" element={<FAQPage />} />
           <Route path="/bucketlist" element={<BucketList />} />
         </Routes>
-        <div>
-        <h2>Image from S3 Bucket:</h2>
-        <img src={s3ImageURL} alt="S3 Bucket Image" />
-      </div>
       </BrowserRouter>
       <Footer />
     </>
